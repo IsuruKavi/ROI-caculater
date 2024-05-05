@@ -1,6 +1,6 @@
 $(document).ready(function () {
-   
-    
+
+
 
 
     $('#ROIForm').submit(function (event) {
@@ -19,19 +19,17 @@ $(document).ready(function () {
             values.push($(this).val());
         });
 
-       function calculateROI(values){
-        let ROI_value=((parseInt(values[1])-parseInt(values[2]))/parseInt(values[0]))*100;
-        return ROI_value;
-       }
+        function calculateROI(values) {
+            let ROI_value = ((parseInt(values[1]) - parseInt(values[2])) / parseInt(values[0])) * 100;
+            return ROI_value;
+        }
         // Output the array of user-entered values to the console
-    
-        
-       
-    
-        $('#npv_value').text('ROI: ' + calculateROI(values)+' %');
-    
+
+
+
+
+        $('#ROI_value').text('ROI: ' + calculateROI(values) + ' %');
+
     });
 
 });
-
-
